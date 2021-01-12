@@ -1,0 +1,183 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: sans-serif;
+}
+
+#container-carousel{
+    height: 100%;
+    display: grid;
+    align-content: center;
+}
+.flickity-enabled {
+    height: 100%;
+
+}
+.carousel {
+    background: rgb(237, 220, 214);
+}
+
+.carousel-cell {
+    width: 66%;
+    height: 300px;
+    color: black;
+    text-align: center;
+    /* background: #8C8; */
+    /* counter-increment: carousel-cell; */
+}
+
+.icons img{
+    height: 100%;
+}
+.icons img:hover{
+    cursor: pointer;
+}
+.icons{
+    height: 26px;
+}
+
+.carousel-cell .img{
+    height: 80%;
+    width: 80%;
+    /* padding: 20px; */
+    border: 15px solid;
+    border-color: rgb(182, 106, 76) ;
+    margin-top: 20px;
+}
+
+.info{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    width: 65%;
+    font-size: 80%;
+    color: #ffffff;
+    text-align: initial;
+    background-color: rgba(82, 79, 79,0.7);
+    /* cursor: pointer; */
+}
+.video-container{
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+.video-container .close{
+    left: 10%;
+    height: max-content;
+    /* background-color: aqua; */
+    color: antiquewhite;
+    position: relative;
+    top: 10px;
+    /* right: -290px; */
+}
+.video-container .close:hover{
+   cursor: pointer;
+}
+.video-element{
+    display: none;
+    align-self: center;
+    width: 50%;
+    height: 50%;
+}
+.visible{
+    display: flex !important;
+}
+
+.info p {
+    margin: 10px;
+}
+
+#lds-grid {
+    align-self: center;
+    display: none;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+#lds-grid div {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: rgb(182, 106, 76);
+  animation: lds-grid 1.2s linear infinite;
+}
+
+#lds-grid div:nth-child(1) {
+  top: 6px;
+  left: 6px;
+  animation-delay: 0s;
+}
+
+#lds-grid div:nth-child(2) {
+  top: 6px;
+  left: 26px;
+  animation-delay: -0.4s;
+}
+
+#lds-grid div:nth-child(3) {
+  top: 6px;
+  left: 45px;
+  animation-delay: -0.8s;
+}
+
+#lds-grid div:nth-child(4) {
+  top: 26px;
+  left: 6px;
+  animation-delay: -0.4s;
+}
+
+#lds-grid div:nth-child(5) {
+  top: 26px;
+  left: 26px;
+  animation-delay: -0.8s;
+}
+
+#lds-grid div:nth-child(6) {
+  top: 26px;
+  left: 45px;
+  animation-delay: -1.2s;
+}
+
+#lds-grid div:nth-child(7) {
+  top: 45px;
+  left: 6px;
+  animation-delay: -0.8s;
+}
+
+#lds-grid div:nth-child(8) {
+  top: 45px;
+  left: 26px;
+  animation-delay: -1.2s;
+}
+
+#lds-grid div:nth-child(9) {
+  top: 45px;
+  left: 45px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
